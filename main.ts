@@ -1,4 +1,7 @@
-function led2 (y: number, speed: number) {
+/**
+ * 未完成
+ */
+function led2 (y: number, speed: number, x: number) {
     while (true) {
         for (let index = 0; index <= 4; index++) {
             if (list[y][index] == 1) {
@@ -25,7 +28,9 @@ function led2 (y: number, speed: number) {
 input.onButtonPressed(Button.A, function () {
     換邊 = 1
 })
-// 從上而下
+/**
+ * 未完成
+ */
 input.onButtonPressed(Button.B, function () {
     換邊 = 2
     list = [
@@ -106,23 +111,26 @@ list = [
 0
 ]
 ]
+basic.forever(function () {
+	
+})
 // 第一排的燈
 control.inBackground(function () {
-    led2(0, 1000)
+    led2(0, 1000, 0)
 })
 // 第二排的燈
 control.inBackground(function () {
-    led2(1, 500)
+    led2(1, 500, 1)
 })
 // 第三排的燈
 control.inBackground(function () {
-    led2(2, 250)
+    led2(2, 250, 2)
 })
 // 第四排的燈
 control.inBackground(function () {
-    led2(3, 200)
+    led2(3, 200, 3)
 })
 // 第五排的燈
 control.inBackground(function () {
-    led2(4, 100)
+    led2(4, 100, 4)
 })
